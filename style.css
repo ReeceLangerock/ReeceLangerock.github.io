@@ -1,0 +1,63 @@
+.name-Container{
+
+  border-top: 1px solid #232D33;
+  border-bottom: 1px solid #232D33;
+  border-top-style: dashed;
+  border-bottom-style: dashed
+
+}
+.socialMediaButtons{
+  margin:10px;
+}
+
+h1{
+  font-family: Highlands, Helvetica, Arial, sans-serif;
+  font-size: 50px;
+  color: #727C82;
+
+}
+
+main{
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 45%;
+}
+
+body{
+  background-image: url("background.jpg");
+    background-repeat: repeat repeat;
+}
+
+ul{
+list-style-type: none;
+margin:0;
+padding:0;
+overflow: hidden;
+background-color: #333;
+
+}
+
+li{
+  float: right;
+}
+
+li a{
+  display: block;;
+  color:white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+
+}
+
+li a:hover{
+  background-color: #111;
+}
+.navbarTitle{
+  float: left;
+  text-align: center;
+  color:white;
+}

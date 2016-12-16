@@ -1,7 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Reece Langerock</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+$.get("navigation.html", function(data){
+  console.log("test");
+    $("#nav-placeholder").replaceWith(data);
+    console.log("test");
+});
+</script>
+
+
+
+</head>
+
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<div id = "nav-placeholder"></div>
+
+
+<main>
+<div class = "name-Container">
+  <h1>Reece Langerock</h1>
+
+</div>
+<div class = "socialMediaButtons">
+<button><a href ="https://github.com/ReeceLangerock">Git</a></button>
+<button><a href ="https://www.linkedin.com/in/reece-langerock-6aab1917">LinkedIn</a></button>
+<button><a href ="https://www.freecodecamp.com/reecelangerock">FCC</a></button>
+<button>Open Badges</button>
+</div>
+
+</main>
 </body>
 </html>
