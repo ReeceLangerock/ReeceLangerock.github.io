@@ -8,8 +8,12 @@
 
 
 /*ENTIRE SITE CSS*/
+@font-face {
+    font-family: Iceland-Regular;
+    src: url(Iceland-Regular.ttf);
+}
 h1,h2,h3{
-  font-family: Highlands, Helvetica, Arial, sans-serif;
+  font-family: Iceland-Regular, Helvetica, Arial, sans-serif;
   color: #eb5937;
 }
 
@@ -19,6 +23,13 @@ p{
 
 li{
   color: #d3cbbd;
+}
+
+html, body {
+  margin:0;
+  padding:0;
+  background-color: #403d3c;
+
 }
 
 
@@ -36,33 +47,6 @@ li{
   margin:10px;
 }
 
-.portfolioContainer{
-  text-align: center;
-  position:absolute;
-  margin-left: 10%;
-  margin-right: 10%;
-}
-
-
-.portfolioImage{
-  box-sizing: border-box;
-  max-width: 100%;
-   height: auto;
-  margin:5px 10px 5px 10px;
-  padding:5px;
-
-}
-
-.portfolioDiv{
-  text-align: center;
-  color:#eb5937;
-  display: flex;
-  justify-content: space-between;
-  margin:5px;
-
-
-}
-
 main{
   position: absolute;
   text-align: center;
@@ -71,18 +55,52 @@ main{
   transform: translate(-50%, -50%);
   min-width: 30%;
 }
-html, body {
-  margin:0; 
-  padding:0;
-  background-color: #403d3c;
+
+/*PORTFOLIO PAGE STYLING */
+.portfolioContainer{
+  text-align: center;
+  position:absolute;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-family: Iceland-Regular, Helvetica, Arial, sans-serif;
+  font-size: 20px;
+}
+
+.portfolioImage{
+  box-sizing: border-box;
+  max-width: 100%;
+   height: auto;
+  margin:5px 10px 5px 10px;
+  padding:5px;
+}
+
+.portfolioDiv{
+  text-align: center;
+  color:#eb5937;
+  display: flex;
+  justify-content: space-between;
+  margin:5px;
+}
+
+/*ABOUT ME PAGE STYING*/
+.aboutMeContainer{
+  background-color: #456f74;
+  border:1px solid #1c1919;
+  margin-left: 10%;
+  margin-right:10%;
+  border-radius: 25px;
+  margin-top: 2%;
+  padding: 10px;
 
 }
 
+/* LINK AND BUTTON STYLING */
 button {
+  font-family: Iceland-Regular, Helvetica, Arial, sans-serif;
+  font-size:15px;
   background-color: #1c1919;
   border-color: #1c1919;
   color:#eb5937;
-
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
 }
@@ -102,13 +120,12 @@ a:hover{
 /*NAVIGATION BAR CSS*/
 
 ul.topNav{
+  font-family: Iceland-Regular, Helvetica, Arial, sans-serif;
 list-style-type: none;
-
 overflow: hidden;
 background-color: #1c1919;
 margin:0;
 padding:0px;
-
 }
 
 ul.topNav li{
@@ -120,7 +137,6 @@ ul.topNav li a{
   color:#eb5937;
   padding: 14px 16px;
   text-decoration: none;
-
 }
 
 ul.topNav li a:hover{
