@@ -1,40 +1,96 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reece Langerock</title>
     <link rel="stylesheet" href="style.css">
+
+    <script src="javascript/portfolioDisplay.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script>
-$.get("navigation.html", function(data){
-    $("#nav-placeholder").replaceWith(data);
-});
-</script>
-
-
+    <script>
+        $.get("navigation.html", function(data) {
+            $("#nav-placeholder").replaceWith(data);
+        });
+        $('#portfolio-placeholder').load("portfolio.html");
+    </script>
+    <script src="javascript/smoothAnchorScroll.js"></script>
 
 </head>
 
-
 <body>
-<div id = "nav-placeholder"></div>
+    <div id="nav-placeholder"></div>
+    <main>
+        <div class="landing container">
+            <div class = "landingText">Reece Langerock</div>
+        </div>
 
+        <div class="container">
+            <a class="anchor" id="about"></a>
+            <div class="inner-container about">
+                <div>
+                    <h1>About Me</h1>
 
-<main>
-<div class = "name-Container">
-  <h1 style="font-size:50px">Reece Langerock</h1>
-  <h3>Front-End Developer</h2>
+                    <p>I am a Chicago based front-end developer, feverishly working to become a back-end and full-stack developer.</p>
+                    <p>I am a life-long learner and have been programming as a hobby for years, until I recently realized I want to program full-time, not just nights and weekends. To that end, I have been working through the <a href="https://www.freecodecamp.com/about/"><u>FreeCodeCamp</u></a>                        curricilum. I earned my Front-End Certification in December of 2016 and will soon complete the Back-End Certification and move onto Data Visiualization</p>
 
-</div>
-<div class = "socialMediaButtons">
-<a href ="https://github.com/ReeceLangerock"><button>GitHub</button></a>
-<a href ="https://www.linkedin.com/in/reece-langerock-6aab1917"><button>LinkedIn</button></a>
-<a href ="https://www.freecodecamp.com/reecelangerock"><button>FCC</button></a>
-<button>Open Badges</button>
-</div>
+                    <p>
+                        On the Front-end front I know: HTML, CSS, JavaScript, JQuery, UI Design and am learning React.
+                    </p>
+                    <p>
+                        On the Back-end I know: Node.js, Express.js, MongoDB, Heroku Deployment and Java.
+                    </p>
+                    <p>
+                        If you'd like to find out more, please reach out to me <a class="scroll" href="#contact"><u>below!</u></a>
+                    </p>
 
-</main>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <a class="anchor" id="portfolio"></a>
+            <div class="inner-container">
+                <div>
+                    <h1>Portfolio</h1>
+                </div>
+
+                <div class="button-container">
+                    <button id="0" onclick="changePortfolioSectionDisplayed(this.id)">Fullstack</button>
+                    <button id="1" onclick="changePortfolioSectionDisplayed(this.id)">API Projects</button>
+                    <button id="2" onclick="changePortfolioSectionDisplayed(this.id)">JavaScript</button>
+                    <button id="3" onclick="changePortfolioSectionDisplayed(this.id)">Java</button>
+                </div>
+
+                <div id="portfolio-placeholder">
+                    <script>
+                        $('#portfolio-placeholder').load("portfolio.html #0");
+                    </script>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container">
+            <a class="anchor" id="contact"></a>
+            <div class="inner-container">
+                <div>
+                    <h1>Contact Me</h1>
+                    <p>I want to work! Please feel free to contact me via email or my LinkedIn account.</p>
+                    <h2><a href="mailto:ReeceLangerock@gmail.com">ReeceLangerock@gmail.com</a></h2>
+                    <div class="button-container">
+                        <a href="https://github.com/ReeceLangerock"><button id="0" onclick="">GitHub</button></a>
+                        <a href="https://www.linkedin.com/in/reece-langerock-6aab1917"><button id="1" onclick="">LinkedIn</button></a>
+                        <a href="https://www.freecodecamp.com/reecelangerock"><button id="2" onclick="">FreeCodeCamp</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>Copyright © Reece Langerock 2017</footer>
 </body>
+
 </html>
